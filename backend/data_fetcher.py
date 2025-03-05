@@ -21,7 +21,6 @@ def fetch_sp500_tickers():
         if cols:
             ticker = cols[0].text.strip().replace(".", "-")  # Adjust for Yahoo Finance
             tickers.append(ticker)
-    print(tickers)
     return tickers
 
 # Function to fetch the latest stock data for a given ticker

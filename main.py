@@ -1,5 +1,6 @@
 import streamlit as st
 from backend.data_fetcher import *
+from backend.top_buy import *
 
 # Set page configuration (optional)
 st.set_page_config(page_title="Stock Dashboard", page_icon="📈", layout="wide")
@@ -25,6 +26,10 @@ if page == "Home":
         index=None,  # No default selection
         help="Start typing to search or scroll through the list"
     )
+
+    if st.button("Top Rated Stocks"):
+        get_top_strong_buy_yfinance()
+ 
 
     # If a stock is selected, redirect to the details page
     if selected_stock:

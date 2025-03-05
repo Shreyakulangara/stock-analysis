@@ -16,7 +16,7 @@ if "selected_stock" in st.session_state:
     st.subheader(company_name)
 
 
-        # Fetch historical stock data
+    # Fetch historical stock data
     data = fetch_data(ticker)
 
         # Display stock price chart
